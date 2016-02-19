@@ -1,43 +1,83 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_repeat" id="599" inline="true" x="-110" y="-6">
-    <value name="TIMES">
-      <block type="math_number" id="628">
-        <field name="NUM">2</field>
-      </block>
-    </value>
+  <block type="controls_whileUntil" id="1149" inline="false" x="-180" y="-24">
+    <field name="MODE">WHILE</field>
     <statement name="DO">
-      <block type="movement_reverse" id="333">
+      <block type="movement_forward" id="1287">
         <next>
-          <block type="robot_delay" id="479" inline="true">
-            <value name="DELAY">
-              <block type="math_number" id="526">
-                <field name="NUM">100</field>
-              </block>
-            </value>
+          <block type="oled_cleardisplay" id="657">
             <next>
-              <block type="movement_stop" id="393">
+              <block type="oled_setcursor" id="687" inline="true">
+                <value name="STARTX">
+                  <block type="math_number" id="694">
+                    <field name="NUM">12</field>
+                  </block>
+                </value>
+                <value name="STARTY">
+                  <block type="math_number" id="707">
+                    <field name="NUM">10</field>
+                  </block>
+                </value>
                 <next>
-                  <block type="movement_forward" id="419">
+                  <block type="oled_drawtext" id="722">
+                    <field name="TEXT">Hello</field>
                     <next>
-                      <block type="robot_delay" id="496" inline="true">
-                        <value name="DELAY">
-                          <block type="math_number" id="548">
-                            <field name="NUM">100</field>
+                      <block type="led_select" id="744" inline="true">
+                        <field name="ACTION">ON</field>
+                        <value name="LED">
+                          <block type="math_number" id="762">
+                            <field name="NUM">4</field>
                           </block>
                         </value>
                         <next>
-                          <block type="movement_left" id="461">
+                          <block type="led_select" id="777" inline="true">
+                            <field name="ACTION">ON</field>
+                            <value name="LED">
+                              <block type="math_number" id="791">
+                                <field name="NUM">3</field>
+                              </block>
+                            </value>
                             <next>
-                              <block type="movement_stop" id="513">
+                              <block type="oled_color" id="921">
+                                <field name="OBJECT">BLACK</field>
                                 <next>
-                                  <block type="robot_delay" id="463" inline="true">
-                                    <value name="DELAY">
-                                      <block type="math_number" id="562">
-                                        <field name="NUM">100</field>
-                                      </block>
-                                    </value>
+                                  <block type="oled_cleardisplay" id="952">
                                     <next>
-                                      <block type="movement_stop" id="429"></block>
+                                      <block type="robot_delay" id="1061" inline="true">
+                                        <value name="DELAY">
+                                          <block type="math_number" id="1068">
+                                            <field name="NUM">5000</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="oled_drawtext" id="969">
+                                            <field name="TEXT">Its me</field>
+                                            <next>
+                                              <block type="robot_delay" id="1086" inline="true">
+                                                <value name="DELAY">
+                                                  <block type="math_number" id="1093">
+                                                    <field name="NUM">6000</field>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="led_select" id="1102" inline="true">
+                                                    <field name="ACTION">ON</field>
+                                                    <value name="LED">
+                                                      <block type="math_number" id="1109">
+                                                        <field name="NUM">2</field>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="oled_drawtext" id="1118">
+                                                        <field name="TEXT">Ive been wondering</field>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
                                     </next>
                                   </block>
                                 </next>
