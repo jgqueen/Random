@@ -37,40 +37,13 @@
                           <block type="oled_color" id="921">
                             <field name="OBJECT">BLACK</field>
                             <next>
-                              <block type="oled_cleardisplay" id="952">
+                              <block type="movement_stop" id="1340">
                                 <next>
-                                  <block type="robot_delay" id="1061" inline="true">
-                                    <value name="DELAY">
-                                      <block type="math_number" id="1068">
-                                        <field name="NUM">5000</field>
-                                      </block>
-                                    </value>
+                                  <block type="movement_left" id="1351">
                                     <next>
-                                      <block type="oled_drawtext" id="969">
-                                        <field name="TEXT">Its me</field>
+                                      <block type="movement_stop" id="1361">
                                         <next>
-                                          <block type="robot_delay" id="1086" inline="true">
-                                            <value name="DELAY">
-                                              <block type="math_number" id="1093">
-                                                <field name="NUM">5000</field>
-                                              </block>
-                                            </value>
-                                            <next>
-                                              <block type="led_select" id="1102" inline="true">
-                                                <field name="ACTION">ON</field>
-                                                <value name="LED">
-                                                  <block type="math_number" id="1109">
-                                                    <field name="NUM">2</field>
-                                                  </block>
-                                                </value>
-                                                <next>
-                                                  <block type="oled_drawtext" id="1118">
-                                                    <field name="TEXT">Ive been wondering</field>
-                                                  </block>
-                                                </next>
-                                              </block>
-                                            </next>
-                                          </block>
+                                          <block type="movement_forward" id="1373"></block>
                                         </next>
                                       </block>
                                     </next>
